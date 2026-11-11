@@ -3,6 +3,7 @@
 # empty or already looks like a pane ID (wX:pY), so manual names are kept.
 set -eu
 h="${HERDR_BIN_PATH:-herdr}"
+command -v jq >/dev/null 2>&1 || { echo "pane-id-labels: jq not found on PATH" >&2; exit 1; }
 "$h" workspace list | jq -r '.result.workspaces[].workspace_id' | while read -r ws; do
   "$h" pane list --workspace "$ws" | jq -r '
     .result.panes[]
