@@ -18,7 +18,7 @@ A [Herdr](https://herdr.dev) plugin that labels every pane with its own pane ID
 ## Install
 
 ```sh
-herdr plugin install <owner>/herdr-pane-id-labels
+herdr plugin install 0bmario/herdr-pane-id-labels
 herdr plugin action invoke pane-id-labels.relabel   # label already-open panes now
 ```
 
