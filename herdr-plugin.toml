@@ -1,0 +1,23 @@
+id = "pane-id-labels"
+name = "Pane ID Labels"
+version = "0.1.0"
+min_herdr_version = "0.9.4"
+description = "Label every pane with its current pane ID, kept up to date across splits, moves, and restarts"
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["sh", "relabel.sh"]
+
+[[events]]
+on = "pane.created"
+command = ["sh", "relabel.sh"]
+
+[[events]]
+on = "pane.moved"
+command = ["sh", "relabel.sh"]
+
+[[actions]]
+id = "relabel"
+title = "Relabel panes with their IDs"
+contexts = ["workspace"]
+command = ["sh", "relabel.sh"]
