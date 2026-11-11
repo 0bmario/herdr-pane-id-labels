@@ -3,8 +3,8 @@
 A [Herdr](https://herdr.dev) plugin that labels every pane with its own pane ID
 (e.g. `w5:p2`), so the ID is visible on the pane border without opening the sidebar.
 
-Handy when you tell one agent to talk to another: read the ID off the target
-pane's border and pass it along (`herdr agent prompt w5:p2 "..."`).
+![Pane borders showing pane IDs w5:pJ and w5:pK](docs/screenshot.png)
+
 
 ## What it does
 
