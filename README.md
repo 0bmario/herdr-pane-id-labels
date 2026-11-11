@@ -5,9 +5,6 @@ A [Herdr](https://herdr.dev) plugin that labels every pane with its own pane ID
 
 ![Pane borders showing pane IDs w5:pJ and w5:pK](docs/screenshot.png)
 
-Useful when one agent needs to talk to another: read the ID off the target pane's
-border and pass it along, e.g. `herdr agent prompt w5:pK "..."`.
-
 ## What it does
 
 - **On Herdr startup:** labels every pane, including panes restored from the last session.
